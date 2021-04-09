@@ -1,0 +1,178 @@
+html, body{
+    padding : 0 ; 
+    margin : 0; 
+    /* position: relative; */
+}
+
+
+
+.background-image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    /* z-index: -100; */
+    z-index: 1;
+}
+
+#bg-gif{
+    background-image: url("../img/map.gif");
+    z-index: -2;
+}
+.change-color{
+	position: absolute;
+    z-index: 2;
+    top: 3%;
+    left: 2%;
+    width: 30px;
+    height: 30px;
+}
+ .btn{
+    position: absolute;
+    z-index: 2;
+    top: 2%;
+    left: 93% ;  
+    background-color: rgb(43, 42, 42)!important ;
+    border-color: #fff!important ;
+    transform: translate(-50% , 50%) ;
+    /* margin-right : 50px;  */
+
+}
+
+.send{
+    background: none;
+    color: #ffdf4e;
+    border: 2px solid #ffdf4e;
+    padding: .25em .25em;
+    /* font-size: 3em; */
+    
+  border-radius: 4px;
+    }
+.send:hover{
+    border: 2px solid #ffdf4e;
+    transform: translatey(-.25em);
+    transition: .35s .2s;
+    box-shadow: 10px 10px 10px black; 
+}
+
+.form{
+    /* position: relative; */
+    z-index: 2;
+    position: absolute;
+    top: 12%;
+    left: 78%;
+    padding: 10px;
+    margin-right : 20px; 
+    background-color: rgb(43, 42, 42)!important ;
+    color:#fff ;
+    border-radius: 20px;
+    letter-spacing:1px;
+}
+.form div{
+    margin-top : 12%;
+   
+}
+#options{
+    /* display: none; */
+
+}
+#form-destination{
+    padding: 10px;
+    margin: 0;
+    display: none;
+   
+    z-index: 2;
+}
+.input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    border-radius: 3px;
+	color: black;
+}
+
+#send{
+    margin-top : 25px; 
+}
+
+.leaflet-routing-alternatives-container{
+   display: none;
+}
+.leaflet-touch .leaflet-bar{
+    display: none;
+}
+
+.Option3 div img{
+    height: 70px;
+    background-color : transparent;
+}
+#img-monument{
+    display: none;
+}
+
+input[type=text], textarea, input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 0px;
+  resize: vertical;
+}
+label{margin-right: 0px;
+  margin-left: 0px;
+  width: 100%;}
+
+input[type=submit] {
+    background: none;
+    color: #ffdf4e;
+    border: 2px solid #ffdf4e;
+    padding: .25em .25em;
+    border-radius: 4px;
+}
+
+input[type=submit]:hover {
+    border: 2px solid #ffdf4e;  
+    transform: translatey(-.25em);
+    transition: .35s .2s;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.37); 
+}
+
+.container {
+  box-sizing : border-box;
+  border-radius:5px;
+  background-color:#f2f2f2;
+  padding:20px;
+  width: 100%;
+  max-width: 440px;
+  margin:0 auto;
+  margin-top: 180px;
+}
+h1  {
+  color: #ffc800;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .form {
+     left: 70%; 
+    }
+    .btn{
+        left: 90%;
+    }
+}
+
+#img-monument{
+    height: 200px;
+    overflow: auto;
+}
+
+.consigne-dialog{
+    display: none;
+}

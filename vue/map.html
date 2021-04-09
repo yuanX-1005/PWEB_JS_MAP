@@ -1,0 +1,94 @@
+<!DOCTYPE html >
+<html>
+	<head>
+        <meta charset ="UTF-8" >
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title> Map </title>	
+        <link rel = "stylesheet" href = "./vue/css/map_style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+	</head>
+
+	<body>
+		<div class="background-image-container " id="mapid"></div>
+       <button class='btn btn-success pushme2 with-color' id="btn-form btn" >CLICK ICI !</button>
+            
+        <div class="form" id ="options">
+
+            <label>Choisissez l'option que vous souhaitez: </label>
+
+            <div class="option1">
+                <label>
+                    <input type="radio" name="light" id="addr" value="deux" onchange="options1()">
+                    <span class="text">Entrer 2 adresses</span>
+                </label>
+                <form id="form-destination" class ="dest" method="get">
+                    <label>Départ:</label> 
+                    <input type="text" name="depart" class="input" id="depart" placeholder="Point de départ" /><br>
+                    <label>Arrivée:</label>
+                    <input type="text" name="arrivee" class="input" id="arrivee" placeholder="Point d'arrivé" /><br>
+                    <input class="send" type="submit" value="Tracer l'itinéraire">
+                </form>
+            </div>
+
+            <div class="Option2">
+                <label>
+                    <input type="radio" name="light"  id="mak" value="deux_markers" onchange="options2()">
+                    <span class="text">Placer 2 markers</span>
+                </label>
+            </div>
+
+            <div class="Option3">
+                <label>
+                    <input type="radio" name="light" id="monu" value="monuments" onchange="options3()">
+                    <span class="text">Jeu de draggable monument</span>
+                </label>
+                <div id="img-monument">
+                    <img  class="ui-widget-content"id="Tour Eiffel" src="./vue/img/tourEiffel.png">
+                    <img  class="ui-widget-content"id="Big Ben" src="./vue/img/bigBen.png">
+                    <img  class="ui-widget-content"id="Corcovado" src="./vue/img/corcovado.png">
+                    <img  class="ui-widget-content"id="Kremlin" src="./vue/img/kremlin.png">
+                    <img  class="ui-widget-content"id="Cite Interdite" src="./vue/img/citeInterdite.png">
+                    <img  class="ui-widget-content"id="Opera de Sydney" src="./vue/img/opera.png">
+                    <img  class="ui-widget-content"id="Sphinx de Gizeh" src="./vue/img/sphinx.png">
+                    <img  class="ui-widget-content"id="Statue de Liberte" src="./vue/img/statutLiberte.png">
+                    <img  class="ui-widget-content"id="Taj Mahal" src="./vue/img/tajMahal.png">
+                    <img  class="ui-widget-content"id="Tour De Pise" src="./vue/img/tourDePise.png">
+
+                </div>
+              
+
+            </div>
+        </div>
+
+
+		<div class ="consigne-dialog"id="dialogFirstOption" title="Consigne">
+			<p>Cliquez sur la map pour afficher l'itinéraire entre les deux adresses.</p>
+		</div>
+
+        <div  class ="consigne-dialog" id="dialogSecondOption" title="Consigne">
+			<p>Cliquez pour deposer deux markers</p>
+		</div>
+
+        <div  class ="consigne-dialog" id="dialogThirdOption" title="Consigne">
+			<p>Remettez le monument à sa place. Une zone verte fera surface lorque celui-ci sera bien placé</p>
+		</div>
+		
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+        <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+		<script src = "./vue/js/map_app.js"></script>
+
+        
+	</body>
+	
+
+</html>
+    
